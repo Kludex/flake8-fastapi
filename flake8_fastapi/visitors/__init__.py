@@ -1,0 +1,1 @@
+from flake8_fastapi.visitors.route_decorator import RouteDecorator

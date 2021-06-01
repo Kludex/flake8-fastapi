@@ -21,8 +21,13 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
 ]
 
+[tool.poetry.plugins."flake8.extension"]
+CF = "flake8_fastapi.plugin:FastAPIPlugin"
+
 [tool.poetry.dependencies]
 python = "^3.8"
+flake8-pytest-style = "^1.4.2"
+fastapi = "^0.65.1"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
