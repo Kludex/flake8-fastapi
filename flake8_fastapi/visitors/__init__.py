@@ -1,1 +1,2 @@
 from flake8_fastapi.visitors.route_decorator import RouteDecorator
+from flake8_fastapi.visitors.router_prefix import RouterPrefix
