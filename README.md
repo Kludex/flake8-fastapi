@@ -98,7 +98,7 @@ app = FastAPI()
 app.include_router(router)
 ```
 
-### Generic Exception Handler
+### Generic Exception Handler (CF004)
 
 FastAPI doesn't allow us to handle the base `Exception` with `exception_handler` decorator.
 It's due to Starlette implementation, but well, FastAPI inherits the issue.
