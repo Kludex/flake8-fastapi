@@ -124,7 +124,7 @@ async def home():
     raise Exception()
 ```
 
-But you can create a new exception, inheriting from `Exception` or use [`HTTPException`](https://fastapi.tiangolo.com/tutorial/handling-errors/#use-httpexception):
+But you can create a new exception, inheriting from `Exception`, or use [`HTTPException`](https://fastapi.tiangolo.com/tutorial/handling-errors/#use-httpexception):
 
 ```python
 from fastapi import FastAPI, Request
