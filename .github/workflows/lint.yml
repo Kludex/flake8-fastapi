@@ -2,13 +2,13 @@ name: Lint
 
 on:
   push:
-    branches: [master, main]
+    branches: [main]
 
   pull_request:
-    branches: [master, main]
+    branches: [main]
 
 jobs:
-  build:
+  linter:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -32,10 +32,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --upgrade poetry
-          poetry install
+        run: make install
 
       - name: Lint
         run: make lint

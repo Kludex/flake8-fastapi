@@ -1,0 +1,30 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish:
+    name: Publish release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Publish to PyPI
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          python -m poetry config pypi-token.pypi $PYPI_TOKEN
+          poetry publish --build
