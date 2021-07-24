@@ -1,4 +1,5 @@
 # Latest Changes
+* 📝 Add docs about generic 'exception_handler' rule. PR [#9](https://github.com/Kludex/flake8-fastapi/pull/9) by [@Kludex](https://github.com/Kludex).
 * ✨ Add generic 'exception_handler' rule. PR [#8](https://github.com/Kludex/flake8-fastapi/pull/8) by [@Kludex](https://github.com/Kludex).
 * ♻️ Reorganize test suite. PR [#7](https://github.com/Kludex/flake8-fastapi/pull/7) by [@Kludex](https://github.com/Kludex).
 * 🔖 Release 0.3.0. PR [#6](https://github.com/Kludex/flake8-fastapi/pull/6) by [@Kludex](https://github.com/Kludex).
