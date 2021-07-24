@@ -3,6 +3,14 @@ help: ## Show this help
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 
+.PHONY: install
+install:  ## Install package.
+	@echo "🏗️ Installing package"
+	pip install --upgrade pip
+	pip install --upgrade poetry
+	poetry install
+
+
 .PHONY: lint
 lint:  ## Linter the code.
 	@echo "🚨 Linting code"
