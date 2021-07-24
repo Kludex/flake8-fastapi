@@ -29,7 +29,7 @@ Then, check if the plugin is installed using `flake8`:
 
 ``` bash
 $ flake8 --version
-3.9.2 (flake8-fastapi: 0.2.0, flake8-pytest-style: 1.4.2, mccabe: 0.6.1, pycodestyle: 2.7.0, pyflakes: 2.3.1) CPython 3.8.11 on Linux
+3.9.2 (flake8-fastapi: 0.2.0, mccabe: 0.6.1, pycodestyle: 2.7.0, pyflakes: 2.3.1) CPython 3.8.11 on Linux
 ```
 
 ## Rules
