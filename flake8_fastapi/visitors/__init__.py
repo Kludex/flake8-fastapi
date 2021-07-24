@@ -1,3 +1,4 @@
 from flake8_fastapi.visitors.cors_middleware import CORSMiddlewareOrder
+from flake8_fastapi.visitors.generic_exception_handler import GenericExceptionHandler
 from flake8_fastapi.visitors.route_decorator import RouteDecorator
 from flake8_fastapi.visitors.router_prefix import RouterPrefix
