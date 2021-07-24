@@ -39,6 +39,7 @@ $ flake8 --version
   - [CF002 - Router Prefix Error](#cf002---router-prefix-error)
   - [CF004 - Generic Exception Handler](#cf004---generic-exception-handler)
   - [CF008 - CORSMiddleware Order](#cf008---corsmiddleware-order)
+  - [CF011 - No Content Response](#cf011---no-content-response)
 <!-- prettier-ignore-end -->
 
 ### CF001 - Route Decorator Error
@@ -193,6 +194,55 @@ app.add_middleware(
     allow_headers=['*']
 )
 ```
+
+### CF011 - No Content Response
+
+Currently, if you try to send a response with no content (204), FastAPI will send a 204 status with a non-empty body.
+It will send a body content-length being 4 bytes.
+
+You can verify this statement running the following code:
+
+```python
+# main.py
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/", status_code=204)
+def home():
+    ...
+```
+
+Now feel free to run with your favorite server implementation:
+
+```bash
+uvicorn main:app
+```
+
+Then use curl or any other tool to send a request:
+
+```bash
+$ curl localhost:8000
+*   Trying 127.0.0.1:8000...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8000 (#0)
+> GET / HTTP/1.1
+> Host: localhost:8000
+> User-Agent: curl/7.68.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 204 No Content
+< date: Sat, 24 Jul 2021 19:21:24 GMT
+< server: uvicorn
+< content-length: 4
+< content-type: application/json
+<
+* Connection #0 to host localhost left intact
+```
+
+This goes against the [RFC](https://tools.ietf.org/html/rfc7231#section-6.3.5), which specifies that a 204 response should have no body.
 
 ## License
 

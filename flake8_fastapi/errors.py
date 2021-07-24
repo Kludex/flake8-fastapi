@@ -28,3 +28,11 @@ class CORSMiddlewareOrderError(Error):
         "The order of middleware matters, please use CORSMiddleware as the last one. "
         "Check https://github.com/tiangolo/fastapi/issues/1663 for more details."
     )
+
+
+class NoContentResponseError(Error):
+    code = "CF011"
+    message = (
+        "You need to add the `response_class` parameter on the decorator for 204. "
+        "Example: '@app.get('/', status_code=204, response_class=Response)'."
+    )
