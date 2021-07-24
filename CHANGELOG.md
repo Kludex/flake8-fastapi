@@ -1,4 +1,5 @@
 # Latest Changes
+* 🔖 Release 0.3.0. PR [#6](https://github.com/Kludex/flake8-fastapi/pull/6) by [@Kludex](https://github.com/Kludex).
 
 ## 0.3.0 - 24/07/2021
 
