@@ -4,6 +4,7 @@ from flake8_fastapi import __version__
 from flake8_fastapi.visitors import (
     CORSMiddlewareOrder,
     GenericExceptionHandler,
+    NoContentResponse,
     RouteDecorator,
     RouterPrefix,
 )
@@ -17,4 +18,5 @@ class FastAPIPlugin(Plugin):
         RouterPrefix,
         GenericExceptionHandler,
         CORSMiddlewareOrder,
+        NoContentResponse,
     ]
