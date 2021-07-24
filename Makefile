@@ -15,7 +15,7 @@ install:  ## Install package.
 lint:  ## Linter the code.
 	@echo "🚨 Linting code"
 	poetry run isort flake8_fastapi tests --check
-	poetry run flake8 flake8_fastapi tests
+	poetry run flake8 flake8_fastapi
 	poetry run mypy flake8_fastapi
 	poetry run black flake8_fastapi tests --check --diff
 

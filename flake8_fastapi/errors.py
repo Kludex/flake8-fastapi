@@ -9,7 +9,7 @@ class RouteDecoratorError(Error):
 class RouterPrefixError(Error):
     code = "CF002"
     message = (
-        "Avoid using `prefix` parameter on `include_router`."
+        "Avoid using `prefix` parameter on `include_router`. "
         "Use it on the `Router` initialization."
     )
 
