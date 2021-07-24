@@ -1,4 +1,5 @@
 # Latest Changes
+* ✨ Add no content response rule. PR [#14](https://github.com/Kludex/flake8-fastapi/pull/14) by [@Kludex](https://github.com/Kludex).
 * 📝 Add table of contents for rules. PR [#12](https://github.com/Kludex/flake8-fastapi/pull/12) by [@Kludex](https://github.com/Kludex).
 * ✏️ Add generic 'exception_handler' rule code on readme. PR [#11](https://github.com/Kludex/flake8-fastapi/pull/11) by [@Kludex](https://github.com/Kludex).
 
