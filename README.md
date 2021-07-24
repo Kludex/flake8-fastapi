@@ -99,6 +99,44 @@ app.include_router(router)
 ```
 
 
+### CORSMiddleware Order (CF008)
+
+There's a [tricky issue](https://github.com/tiangolo/fastapi/issues/1663) about [CORSMiddleware](https://www.starlette.io/middleware/#corsmiddleware) that people are usually unaware. Which is that this middleware should be the last one on the middleware stack. You can read more about it [here](https://github.com/tiangolo/fastapi/issues/1663).
+
+Let's see an example of what doesn't work:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
+app.add_middleware(GZipMiddleware)
+```
+
+As you see, the last middleware added is not `CORSMiddleware`, so it will not work as expected. On the other hand, if you change the order, it will:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+app.add_middleware(GZipMiddleware)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
+```
+
 ## License
 
 This project is licensed under the terms of the MIT license.

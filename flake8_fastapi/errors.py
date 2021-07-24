@@ -12,3 +12,11 @@ class RouterPrefixError(Error):
         "Avoid using `prefix` parameter on `include_router`."
         "Use it on the `Router` initialization."
     )
+
+
+class CORSMiddlewareOrderError(Error):
+    code = "CF008"
+    message = (
+        "The order of middleware matters, please use CORSMiddleware as the last one. "
+        "Check https://github.com/tiangolo/fastapi/issues/1663 for more details."
+    )
