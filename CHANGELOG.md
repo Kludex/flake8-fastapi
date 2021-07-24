@@ -1,4 +1,5 @@
 # Latest Changes
+* 📝 Add table of contents for rules. PR [#12](https://github.com/Kludex/flake8-fastapi/pull/12) by [@Kludex](https://github.com/Kludex).
 * ✏️ Add generic 'exception_handler' rule code on readme. PR [#11](https://github.com/Kludex/flake8-fastapi/pull/11) by [@Kludex](https://github.com/Kludex).
 
 ## 0.4.0 - 24/07/2021
