@@ -34,7 +34,14 @@ $ flake8 --version
 
 ## Rules
 
-### Route Decorator Error (CF001)
+<!-- prettier-ignore-start -->
+  - [CF001 - Route Decorator Error](#cf001---route-decorator-error)
+  - [CF002 - Router Prefix Error](#cf002---router-prefix-error)
+  - [CF004 - Generic Exception Handler](#cf004---generic-exception-handler)
+  - [CF008 - CORSMiddleware Order](#cf008---corsmiddleware-order)
+<!-- prettier-ignore-end -->
+
+### CF001 - Route Decorator Error
 
 Developers that were used to [flask](https://flask.palletsprojects.com/en/2.0.x/) can be persuaded or want to use the same pattern in FastAPI:
 
@@ -62,7 +69,7 @@ def home():
     return "Hello world!"
 ```
 
-### Route Prefix Error (CF002)
+### CF002 - Router Prefix Error
 
 On old FastAPI versions, we were able to add a prefix only on the `include_router` method:
 
@@ -98,7 +105,7 @@ app = FastAPI()
 app.include_router(router)
 ```
 
-### Generic Exception Handler (CF004)
+### CF004 - Generic Exception Handler
 
 FastAPI doesn't allow us to handle the base `Exception` with `exception_handler` decorator.
 It's due to Starlette implementation, but well, FastAPI inherits the issue.
@@ -149,7 +156,7 @@ async def home():
 ```
 
 
-### CORSMiddleware Order (CF008)
+### CF008 - CORSMiddleware Order
 
 There's a [tricky issue](https://github.com/tiangolo/fastapi/issues/1663) about [CORSMiddleware](https://www.starlette.io/middleware/#corsmiddleware) that people are usually unaware. Which is that this middleware should be the last one on the middleware stack. You can read more about it [here](https://github.com/tiangolo/fastapi/issues/1663).
 
