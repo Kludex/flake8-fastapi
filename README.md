@@ -39,6 +39,7 @@ $ flake8 --version
   - [CF002 - Router Prefix Error](#cf002---router-prefix-error)
   - [CF004 - Generic Exception Handler](#cf004---generic-exception-handler)
   - [CF008 - CORSMiddleware Order](#cf008---corsmiddleware-order)
+  - [CF009 - Undocumented HTTPException](#cf009---undocumented-httpexception)
   - [CF011 - No Content Response](#cf011---no-content-response)
 <!-- prettier-ignore-end -->
 
@@ -194,6 +195,25 @@ app.add_middleware(
     allow_headers=['*']
 )
 ```
+
+### CF009 - Undocumented HTTPException
+
+Currently, there's no automatic solution to document the `HTTPException`s, besides the experimental package [`fastapi-responses`](https://github.com/Kludex/fastapi-responses).
+
+For that reason, it's easy to forget the documentation, and have a lot of undocumented endpoints. Let's see an example:
+
+```python
+from fastapi import FastAPI, HTTPException
+
+app = FastAPI()
+
+
+@app.get("/")
+def home():
+    raise HTTPException(status_code=400, detail="Bad Request")
+```
+
+The above endpoint doesn't have a `responses` field, even if it's clear that the response will have a `400` status code.
 
 ### CF011 - No Content Response
 

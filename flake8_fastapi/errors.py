@@ -30,6 +30,14 @@ class CORSMiddlewareOrderError(Error):
     )
 
 
+class UndocumentedHTTPExceptionError(Error):
+    code = "CF009"
+    message = (
+        "Always document your `HTTPException`s. "
+        "Use the `responses` field on the router decorator for it."
+    )
+
+
 class NoContentResponseError(Error):
     code = "CF011"
     message = (

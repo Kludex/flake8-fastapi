@@ -3,3 +3,4 @@ from flake8_fastapi.visitors.generic_exception_handler import GenericExceptionHa
 from flake8_fastapi.visitors.no_content_response import NoContentResponse
 from flake8_fastapi.visitors.route_decorator import RouteDecorator
 from flake8_fastapi.visitors.router_prefix import RouterPrefix
+from flake8_fastapi.visitors.undocumented_exception import UndocumentedHTTPException
