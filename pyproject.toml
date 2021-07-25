@@ -39,6 +39,7 @@ pytest = "^6.2"
 pytest-cov = "^2.10.1"
 mypy = "^0.812"
 uvicorn = "^0.14.0"
+pytest-sugar = "^0.9.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
