@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-fastapi"
-version = "0.5.1"
+version = "0.6.0"
 description = "flake8 plugin that checks FastAPI code against opiniated style rules 🤓"
 authors = ["Marcelo Trylesinski <marcelotryle@gmail.com>"]
 license = "MIT"

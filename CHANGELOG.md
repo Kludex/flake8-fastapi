@@ -1,4 +1,7 @@
 # Latest Changes
+
+### 0.6.0 - 25/07/2021
+
 * ✨ Add undocumented HTTPException rule. PR [#18](https://github.com/Kludex/flake8-fastapi/pull/18) by [@Kludex](https://github.com/Kludex).
 * ♻️ Infer code parameter globally on the tests. PR [#17](https://github.com/Kludex/flake8-fastapi/pull/17) by [@Kludex](https://github.com/Kludex).
 
