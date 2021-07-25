@@ -46,4 +46,4 @@ class NoContentResponse(Visitor):
                                 and inside_keyword.value.id == "Response"
                             ):
                                 return None
-                self.error_from_node(NoContentResponseError, node)
+                        self.error_from_node(NoContentResponseError, node)
