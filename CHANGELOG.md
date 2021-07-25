@@ -1,4 +1,7 @@
 # Latest Changes
+
+### 0.6.1 - 25/07/2021
+
 * 🐛 Include UndocumentedHTTPException to plugin. PR [#20](https://github.com/Kludex/flake8-fastapi/pull/20) by [@Kludex](https://github.com/Kludex).
 * 🚧 Add flake8 on tests and install pytest-sugar. PR [#19](https://github.com/Kludex/flake8-fastapi/pull/19) by [@Kludex](https://github.com/Kludex).
 
