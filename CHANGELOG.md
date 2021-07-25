@@ -1,4 +1,5 @@
 # Latest Changes
+* ♻️ Infer code parameter globally on the tests. PR [#17](https://github.com/Kludex/flake8-fastapi/pull/17) by [@Kludex](https://github.com/Kludex).
 
 ### 0.5.1 - 25/07/2021
 
