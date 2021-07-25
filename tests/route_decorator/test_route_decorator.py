@@ -1,6 +1,3 @@
-from pathlib import Path
-
-import pytest
 from flake8_plugin_utils import assert_error, assert_not_error
 
 from flake8_fastapi.errors import RouteDecoratorError
