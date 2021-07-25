@@ -1,4 +1,5 @@
 # Latest Changes
+* 🚧 Add flake8 on tests and install pytest-sugar. PR [#19](https://github.com/Kludex/flake8-fastapi/pull/19) by [@Kludex](https://github.com/Kludex).
 
 ### 0.6.0 - 25/07/2021
 
