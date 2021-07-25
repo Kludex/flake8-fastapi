@@ -12,7 +12,7 @@ ASTCallable = Union[ast.AsyncFunctionDef, ast.FunctionDef]
 class UndocumentedHTTPException(Visitor):
     METHODS = ("get", "post", "put", "patch", "delete", "head", "options", "trace")
 
-    def __init__(self, config: Optional[TConfig]) -> None:
+    def __init__(self, config: Optional[TConfig] = None) -> None:
         super().__init__(config=config)
 
     def generic_visit(self, node: ast.AST) -> None:
