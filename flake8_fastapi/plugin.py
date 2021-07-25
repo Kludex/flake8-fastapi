@@ -7,6 +7,7 @@ from flake8_fastapi.visitors import (
     NoContentResponse,
     RouteDecorator,
     RouterPrefix,
+    UndocumentedHTTPException,
 )
 
 
@@ -19,4 +20,5 @@ class FastAPIPlugin(Plugin):
         GenericExceptionHandler,
         CORSMiddlewareOrder,
         NoContentResponse,
+        UndocumentedHTTPException,
     ]
