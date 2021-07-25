@@ -1,4 +1,5 @@
 # Latest Changes
+* 🐛 Fix NoContentResponseError being raised on decorators with any keyword. PR [#16](https://github.com/Kludex/flake8-fastapi/pull/16) by [@Kludex](https://github.com/Kludex).
 
 ## 0.5.0 - 24/07/2021
 
