@@ -1,4 +1,5 @@
 # Latest Changes
+* 🔥 Remove CF004 - Generic Exception Handler". PR [#22](https://github.com/Kludex/flake8-fastapi/pull/22) by [@Kludex](https://github.com/Kludex).
 
 ### 0.6.1 - 25/07/2021
 
