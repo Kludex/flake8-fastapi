@@ -1,4 +1,5 @@
 # Latest Changes
+* ⬆️ Support Python 3.10. PR [#23](https://github.com/Kludex/flake8-fastapi/pull/23) by [@Kludex](https://github.com/Kludex).
 * 🔥 Remove CF004 - Generic Exception Handler". PR [#22](https://github.com/Kludex/flake8-fastapi/pull/22) by [@Kludex](https://github.com/Kludex).
 
 ### 0.6.1 - 25/07/2021
