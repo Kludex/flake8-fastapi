@@ -24,7 +24,7 @@ from flake8_fastapi.visitors import NoContentResponse
                 """
             ),
             id="int",
-        )
+        ),
     ),
 )
 def test_code_with_error(code: str):
