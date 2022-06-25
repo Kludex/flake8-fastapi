@@ -37,7 +37,6 @@ $ flake8 --version
 <!-- prettier-ignore-start -->
   - [CF001 - Route Decorator Error](#cf001---route-decorator-error)
   - [CF002 - Router Prefix Error](#cf002---router-prefix-error)
-  - [CF004 - Generic Exception Handler](#cf004---generic-exception-handler)
   - [CF008 - CORSMiddleware Order](#cf008---corsmiddleware-order)
   - [CF009 - Undocumented HTTPException](#cf009---undocumented-httpexception)
   - [CF011 - No Content Response](#cf011---no-content-response)
@@ -105,56 +104,6 @@ def home():
 
 app = FastAPI()
 app.include_router(router)
-```
-
-### CF004 - Generic Exception Handler
-
-FastAPI doesn't allow us to handle the base `Exception` with `exception_handler` decorator.
-It's due to Starlette implementation, but well, FastAPI inherits the issue.
-
-To be more precise, you'll be able to receive the response, but as soon as you check the server logs, you'll see an unexpected trace log.
-
-To exemplify, you can't do:
-
-```python
-from fastapi import FastAPI, Request
-from starlette.responses import JSONResponse
-
-app = FastAPI()
-
-
-@app.exception_handler(Exception)
-async def generic_exception_handler(request: Request, exc: Exception):
-    return JSONResponse(status_code=200, content="It doesn't work!")
-
-
-@app.get("/")
-async def home():
-    raise Exception()
-```
-
-But you can create a new exception, inheriting from `Exception`, or use [`HTTPException`](https://fastapi.tiangolo.com/tutorial/handling-errors/#use-httpexception):
-
-```python
-from fastapi import FastAPI, Request
-from starlette.responses import JSONResponse
-
-app = FastAPI()
-
-
-class NewException(Exception):
-    ...
-
-
-@app.exception_handler(NewException)
-async def new_exception_handler(request: Request, exc: NewException):
-    return JSONResponse(status_code=200, content="It works!")
-
-
-@app.get("/")
-async def home():
-    raise NewException()
-
 ```
 
 
