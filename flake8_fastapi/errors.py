@@ -14,14 +14,6 @@ class RouterPrefixError(Error):
     )
 
 
-class GenericExceptionHandlerError(Error):
-    code = "CF004"
-    message = (
-        "Don't try to handle `Exception` on the `exception_handler`. "
-        "Create a new exception and handle that one, or use `HTTPException`."
-    )
-
-
 class CORSMiddlewareOrderError(Error):
     code = "CF008"
     message = (
