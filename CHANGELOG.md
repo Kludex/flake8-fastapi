@@ -1,4 +1,5 @@
 # Latest Changes
+* ♻️ Refactor test suite structure. PR [#27](https://github.com/Kludex/flake8-fastapi/pull/27) by [@Kludex](https://github.com/Kludex).
 
 ### 0.7.0 - 25/06/2022
 
