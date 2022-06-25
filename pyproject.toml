@@ -30,6 +30,7 @@ CF = "flake8_fastapi.plugin:FastAPIPlugin"
 python = "^3.7"
 flake8-plugin-utils = "^1.3.2"
 fastapi = ">=0.65.1"
+importlib-metadata = { version = "^4.12.0", markers = "python_version < 3.8" }
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
