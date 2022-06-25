@@ -34,7 +34,7 @@ importlib-metadata = { version = "^4.12.0", markers = "python_version < '3.8'" }
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
-black = "^20.8b1"
+black = "^22.3.0"
 flake8 = "^3.9.0"
 isort = "^5.0"
 pre-commit = "^2.9.3"
