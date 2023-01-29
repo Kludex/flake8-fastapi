@@ -1,4 +1,5 @@
 # Latest Changes
+* Update test workflow badge. PR [#30](https://github.com/Kludex/flake8-fastapi/pull/30) by [@sadikkuzu](https://github.com/sadikkuzu).
 * Update flake8 --version part. PR [#29](https://github.com/Kludex/flake8-fastapi/pull/29) by [@sadikkuzu](https://github.com/sadikkuzu).
 * ♻️ Refactor test suite structure. PR [#27](https://github.com/Kludex/flake8-fastapi/pull/27) by [@Kludex](https://github.com/Kludex).
 
