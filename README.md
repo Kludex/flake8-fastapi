@@ -5,7 +5,9 @@
     <a href="https://github.com/Kludex/flake8-fastapi" target="_blank">
         <img src="https://img.shields.io/github/last-commit/Kludex/flake8-fastapi" alt="Latest Commit">
     </a>
-        <img src="https://img.shields.io/github/workflow/status/Kludex/flake8-fastapi/Test">
+    <a href="https://github.com/Kludex/flake8-fastapi/actions/workflows/test.yml" target="_blank">
+        <img src="https://github.com/Kludex/flake8-fastapi/actions/workflows/test.yml/badge.svg" alt="Test workflow action">
+    </a>
         <img src="https://img.shields.io/codecov/c/github/Kludex/flake8-fastapi">
     <br />
     <a href="https://pypi.org/project/flake8-fastapi" target="_blank">
